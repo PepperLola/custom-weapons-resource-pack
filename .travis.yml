@@ -4,7 +4,7 @@ os:
 sudo: required
 before_deploy:
   - cd ..
-  - zip Custom\ Weapons
+  - zip -r Custom\ Weapons.zip Custom\ Weapons
 deploy:
   provider: releases
   api_key: $GIT_TOKEN
