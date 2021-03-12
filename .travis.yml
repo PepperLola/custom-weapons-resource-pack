@@ -3,6 +3,7 @@ os:
   - linux
 sudo: required
 before_deploy:
+  - cd ..
   - zip -r Custom\ Weapons.zip custom-weapons-resource-pack
 deploy:
   provider: releases
