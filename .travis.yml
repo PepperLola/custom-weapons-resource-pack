@@ -6,7 +6,6 @@ before_deploy:
     - git config --local user.name "PepperLola"
     - git config --local user.email $GIT_EMAIL
     - zip -r Custom\ Weapons.zip ./*
-    - cd custom-weapons-resource-pack
     - git tag -a $TRAVIS_BUILD_NUMBER -m "Automated build."
     - git push https://$GIT_TOKEN@github.com/PepperLola/custom-weapons-resource-pack.git HEAD:master --follow-tags
 deploy:
