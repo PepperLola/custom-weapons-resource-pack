@@ -3,7 +3,7 @@ os:
   - linux
 sudo: required
 before_deploy:
-  - ls
+  - ls -al
   - zip -r Custom\ Weapons.zip Custom\ Weapons
 deploy:
   provider: releases
