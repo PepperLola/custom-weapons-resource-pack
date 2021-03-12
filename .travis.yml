@@ -5,8 +5,7 @@ sudo: required
 before_deploy:
     - git config --local user.name "PepperLola"
     - git config --local user.email $GIT_EMAIL
-    - cd ..
-    - zip -r Custom\ Weapons.zip custom-weapons-resource-pack
+    - zip -r Custom\ Weapons.zip ./*
     - cd custom-weapons-resource-pack
     - git tag -a $TRAVIS_BUILD_NUMBER -m "Automated build."
     - git push https://$GIT_TOKEN@github.com/PepperLola/custom-weapons-resource-pack.git HEAD:master --follow-tags
@@ -15,7 +14,7 @@ deploy:
     api_key: $GIT_TOKEN
     skip_cleanup: true
     file_glob: true
-    file: ../Custom\ Weapons.zip
+    file: Custom\ Weapons.zip
     on:
         repo: PepperLola/custom-weapons-resource-pack
         prerelease: true
