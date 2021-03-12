@@ -4,6 +4,13 @@ os:
 sudo: required
 before_deploy:
   - cd ..
-  - ls
   - zip Custom\ Weapons
-  - ls
+deploy:
+  provider: releases
+  api_key: $GIT_TOKEN
+  skip_cleanup: true
+  file_glob: true
+  file: Custom\ Weapons.zip
+  on:
+    repo: PepperLola/custom-weapons-resource-pack
+    prerelease: true
