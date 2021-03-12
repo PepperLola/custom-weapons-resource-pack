@@ -15,7 +15,7 @@ deploy:
     api_key: $GIT_TOKEN
     skip_cleanup: true
     file_glob: true
-    file: Custom\ Weapons.zip
+    file: ../Custom\ Weapons.zip
     on:
         repo: PepperLola/custom-weapons-resource-pack
         prerelease: true
