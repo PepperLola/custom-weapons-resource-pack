@@ -24,7 +24,7 @@ jobs:
       - uses: actions/checkout@v2
       - name: Set Date env Variable
         id: get_version
-        run: echo "CURRENT_DATE=$(date +"%Y-%m-%d_%T")" >> $GITHUB_ENV
+        run: echo "CURRENT_DATE=$(date +"%Y-%m-%d_%T");TAG_NAME=$(date +%s)" >> $GITHUB_ENV
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
@@ -35,7 +35,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: ${{ env.CURRENT_DATE }}
+          tag_name: ${{ env.TAG_NAME }}
           name: Release on ${{ env.CURRENT_DATE }}
           prerelease: false
           files: ./Custom\ Weapons.zip
