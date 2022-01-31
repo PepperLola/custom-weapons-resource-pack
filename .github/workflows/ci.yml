@@ -35,7 +35,6 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: ${{ env.CURRENT_DATE }}
           name: Release on ${{ env.CURRENT_DATE }}
           prerelease: false
           files: ./Custom\ Weapons.zip
