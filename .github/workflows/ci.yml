@@ -24,7 +24,7 @@ jobs:
       - uses: actions/checkout@v2
       - name: Set Date env Variable
         id: get_version
-        run: echo "CURRENT_DATE=$(date +"%Y-%m-%d %T")" >> $GITHUB_ENV
+        run: echo "CURRENT_DATE=$(date +"%Y-%m-%d_%T")" >> $GITHUB_ENV
 
       # Runs a single command using the runners shell
       - name: Run a one-line script
