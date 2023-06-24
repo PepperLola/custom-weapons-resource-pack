@@ -1,7 +1,7 @@
 {
 	"pack": {
-		"pack_format": 6,
-		"description": "Adds custom weapon textures."
+		"pack_format": 15,
+		"description": "Adds custom item textures."
 	},
 	"language": {}
 }
